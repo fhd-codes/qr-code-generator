@@ -8,3 +8,13 @@ This project has an index.html file which is sent from the '/' GET route.
 The styles are built via tailwindCSS.
 
 DOM manipulation is done using Vanilla JS
+
+
+## How to use this app?
+
+- Clone this repo.
+- Run the following commands:
+```
+npm install
+npm run dev
+```
