@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/output.css">
-    <title>Tailwind Test</title>
+    <title>QR code generator - by fhd-codes</title>
 </head>
-<body class="flex items-center justify-center min-h-screen bg-gray-100">
-    <h1 class="text-3xl font-bold bg-blue-200 p-4 rounded">Allah hu</h1>
+<body class="flex min-h-screen bg-gray-100 justify-center">
+    <section class="container">
+        <div class="text-center bg-white p-4 rounded">
+            <h1 class="text-3xl font-bold ">QR Code Generator App</h1>
+            <span class="text-sm">
+                made by <a class="font-semibold italic hover:text-blue-500 underline" href="https://github.com/fhd-codes" target="__blank">fhd-codes</a>
+            </span>
+        </div>
+
+        <div class="form-wrapper">
+            <form id="qr_form" method="POST" class="flex gap-2 mt-6">
+                <input
+                    type="text"
+                    name="input_text"
+                    placeholder="Enter text to generate QR"
+                    class="border rounded p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                />
+                <button
+                    type="submit"
+                    class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                >
+                    Generate
+                </button>
+            </form>
+        </div>
+
+        <div id="qr_result"></div>
+
+    </section>
+
+    <script src="assets/js/index.js"></script>
 </body>
 </html>

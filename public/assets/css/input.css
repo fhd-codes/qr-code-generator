@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container {
+    @apply mx-10 my-5 p-3 rounded-xl bg-gray-200;
+}
