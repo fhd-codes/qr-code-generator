@@ -7,7 +7,7 @@
     <title>QR code generator - by fhd-codes</title>
 </head>
 <body class="flex min-h-screen bg-gray-100 justify-center">
-    <section class="container">
+    <section class="container flex flex-col gap-6">
         <div class="text-center bg-white p-4 rounded">
             <h1 class="text-3xl font-bold ">QR Code Generator App</h1>
             <span class="text-sm">
@@ -16,7 +16,7 @@
         </div>
 
         <div class="form-wrapper">
-            <form id="qr_form" method="POST" class="flex gap-2 mt-6">
+            <form id="qr_form" method="POST" class="flex gap-2 justify-self-center w-full md:w-50vw">
                 <input
                     type="text"
                     name="input_text"
@@ -33,7 +33,7 @@
             </form>
         </div>
 
-        <div id="qr_result"></div>
+        <div id="qr_result" class="flex flex-col gap-3 items-center justify-center"></div>
 
     </section>
 

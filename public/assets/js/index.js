@@ -16,12 +16,25 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(response => response.text()) // Get the response as text
         .then(data => {
+            const qr_result = document.getElementById('qr_result')
+            if (!qr_result) return;
+
             // Insert the response into the #qr_result container.
-            document.getElementById('qr_result').innerHTML = data;
+            qr_result.innerHTML = data;
+
+            const clear_btn = document.getElementById('clear');
+
+            clear_btn.addEventListener('click', () => {
+                qr_result.innerHTML = '';
+                qr_form.reset();
+            });
         })
         .catch(error => {
             console.error('Error:', error);
-            document.getElementById('qr_result').innerHTML = '<h1>Error generating QR code</h1>';
+            const qr_result = document.getElementById('qr_result')
+            if (!qr_result) return;
+
+            qr_result.innerHTML = '<h1>Error generating QR code</h1>';
         });
     });
 });
